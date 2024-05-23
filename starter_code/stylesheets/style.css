@@ -1,21 +1,21 @@
 *, :before, :after {box-sizing:border-box;}
 
 :root {
-	--background-purple-color: #540B51;
+	--white-color: white;
 	--background-ivory-color: #F3EAE2;
-	--botton-blue: #4285F4;
-	--titles-black: #191817;
-	--paragraph: black: #000000;
-	--paragraph-yellow: #ECB12F;
-	--links-blue: #2E71A6;
 	--footer-links-grey: #454245;
+	--paragraph-yellow: #ECB12F;
+	--titles-black: #191817;
+	--background-purple-color: #540B51;
+	--botton-blue: #4285F4;
+	--links-blue: #2E71A6;
 }
 
 html,
 body {
 	margin: 0;
 	padding: 0;
-	background-color: white;
+	background-color: var(--white-color);
 	font-family: Arial, Helvetica, sans-serif;
 	& header {
 		background-color: var(--background-purple-color);
@@ -45,7 +45,7 @@ body {
 
 /* HEADER */
 #header {
-	color: white;
+	color: var(--white-color);
 	display: flex;
 	align-items: center;
 	& h1 {
@@ -70,12 +70,13 @@ body {
 	flex: 1;
 	padding: 5%;
 }
+
 .color1 {
 	color: var(--paragraph-yellow);
 }
 
 .signup-email-button {
-	background-color: white;
+	background-color: var(--white-color);
 	color: var(--background-purple-color);
 }
 
@@ -83,7 +84,7 @@ body {
 	padding: 1;
 	align-items: center;
 	background-color: var(--botton-blue);
-	color: white;
+	color: var(--white-color);
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -91,7 +92,7 @@ body {
 		height: 1.5em;
 		align-items: center;
 		margin-right: 20%;
-		background-color: white;
+		background-color: var(--white-color);
 	}
 	& span {
 		text-align: center;
@@ -114,7 +115,7 @@ body {
 	background-color: var(--background-ivory-color);
 	padding: 5%;
 	& h5 {
-		font-size: 1.5em;
+		font-size: 1.3em;
 		color: var(--titles-black);
 		text-transform: uppercase;
 		text-align: center;
@@ -142,7 +143,7 @@ body {
 		color: var(--background-purple-color);
 	}
 	& h4 {
-		font-size: 1.4em;
+		font-size: 1.3em;
 	}
 	& span {
 		font-size: 3.5em;
@@ -173,7 +174,7 @@ body {
 /*HQ SECTION */
 #hq-section {
 	background-color: var(--background-purple-color);
-	color: white;
+	color: var(--white-color);
 	align-items: center;
 	text-align: center;
 	padding: 1em;
@@ -193,17 +194,17 @@ body {
 }
 
 .free-button {
-	background-color: white;
+	background-color: var(--white-color);
 	color: var(--background-purple-color);
 	border: none;
 }
 
 .sales-button {
 	background-color: var(--background-purple-color);
-	color: white;
-	border-color: white;
+	color: var(--white-color);
+	border-color: var(--white-color);
 	& img {
-		background-color: white;
+		background-color: var(--white-color);
 		height: 1em;
 		align-items: left;
 	}
@@ -245,17 +246,17 @@ body {
 }
 
 .download-sl {
-    padding-left: 20px; /* Ajusta el espacio para la imagen */
-    background-image: url('../images/icon-download.png'); /* Ruta de la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: left center; /* Posición de la imagen */
+    padding-left: 20px;
+    background-image: url('../images/icon-download.png');
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
 .region {
-    padding-left: 20px; /* Ajusta el espacio para la imagen */
-    background-image: url('../images/icon-region.png'); /* Ruta de la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: left center; /* Posición de la imagen */
+    padding-left: 20px;
+    background-image: url('../images/icon-region.png');
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
 /* SCREEN SIZES QUERIES */
@@ -273,15 +274,14 @@ body {
 	
 	.header-img {
 		height: 60vh;
-		overflow: hidden; /* Esconde cualquier contenido que se salga del contenedor */
+		overflow: hidden;
 		position: relative;
 		& img {
 			width: 100%;
 			height: auto;
-			transform: scale(1.5); /* Ajusta el valor para el nivel de zoom deseado */
-			transform-origin: top left; /* Cambia el punto de origen del zoom al centro */
+			transform: scale(1.5);
+			transform-origin: top left;
 		}
-	
 	}
 
 	.goals-blocks {
@@ -298,19 +298,23 @@ body {
 	}
 }
 
-/* Desktop */
+/* Tablet */
 @media (min-width: 768px) {
 	#header {
 		background: url('../images/background-singup.png');
-		background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-		background-position: left; /* Centra la imagen */
+		background-size: cover;
+		background-position: left;
 		background-repeat: no-repeat;
-		height: 100vh; /* Ajusta según sea necesario */
+		height: 100vh;
 		width: 100%; 
 		text-align: left;
 		& button {
 			font-size: 1em;
 		}
+	}
+
+	.header-img {
+		width: 30%;
 	}
 
 	.goals-blocks {
@@ -327,6 +331,6 @@ body {
 	}
 
 	#companies-section img {
-		max-height: 40px;
+		max-height: 35px;
 	}
 }
